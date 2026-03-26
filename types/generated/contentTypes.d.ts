@@ -482,7 +482,7 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     description: Schema.Attribute.Text &
       Schema.Attribute.SetMinMaxLength<{
-        maxLength: 80;
+        maxLength: 180;
       }>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -496,7 +496,6 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    updatedDate: Schema.Attribute.DateTime;
   };
 }
 
@@ -627,13 +626,14 @@ export interface ApiRestaurantRestaurant extends Struct.CollectionTypeSchema {
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'restaurant@gmail.com'>;
     restaurantName: Schema.Attribute.String & Schema.Attribute.Required;
-    restaurantSlug: Schema.Attribute.UID & Schema.Attribute.Required;
+    restaurantSlug: Schema.Attribute.UID<'restaurantName'> &
+      Schema.Attribute.Required;
     restrarantStatus: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<true>;
-    startDate: Schema.Attribute.DateTime &
-      Schema.Attribute.DefaultTo<'2026-03-25T18:30:00.000Z'>;
+    restrorantImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
     updatedAt: Schema.Attribute.DateTime;
-    updateDate: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
   };

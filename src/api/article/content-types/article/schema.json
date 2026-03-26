@@ -17,7 +17,7 @@
     },
     "description": {
       "type": "text",
-      "maxLength": 80
+      "maxLength": 180
     },
     "slug": {
       "type": "uid",
@@ -53,9 +53,6 @@
         "shared.rich-text",
         "shared.slider"
       ]
-    },
-    "updatedDate": {
-      "type": "datetime"
     }
   }
 }
