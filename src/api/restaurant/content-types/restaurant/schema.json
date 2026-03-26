@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "restaurants",
+  "info": {
+    "singularName": "restaurant",
+    "pluralName": "restaurants",
+    "displayName": "Restaurant"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "restaurantSlug": {
+      "type": "uid",
+      "required": true
+    },
+    "restaurantName": {
+      "type": "string",
+      "required": true
+    },
+    "restaurantDescription": {
+      "type": "text"
+    },
+    "restaurantEmail": {
+      "type": "email",
+      "required": true,
+      "default": "restaurant@gmail.com"
+    },
+    "restrarantStatus": {
+      "type": "boolean",
+      "default": true
+    },
+    "startDate": {
+      "type": "datetime",
+      "default": "2026-03-25T18:30:00.000Z"
+    },
+    "updateDate": {
+      "type": "datetime"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "restaurants"
+    }
+  }
+}
