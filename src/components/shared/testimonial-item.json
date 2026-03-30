@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_shared_testimonial_items",
+  "info": {
+    "displayName": "testimonialItem"
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "text",
+      "required": true
+    },
+    "Feedback": {
+      "type": "richtext",
+      "required": true
+    },
+    "Avatar": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

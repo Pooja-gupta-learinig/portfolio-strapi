@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_shared_buttons",
+  "info": {
+    "displayName": "Button"
+  },
+  "options": {},
+  "attributes": {
+    "buttonText": {
+      "type": "string",
+      "required": true
+    },
+    "buttonUrl": {
+      "type": "text",
+      "default": "/about"
+    },
+    "variant": {
+      "type": "enumeration",
+      "default": "primary",
+      "enum": [
+        "primary",
+        "secondary",
+        "ternary",
+        "outline"
+      ]
+    }
+  },
+  "config": {}
+}

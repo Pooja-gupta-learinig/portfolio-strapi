@@ -192,6 +192,28 @@
           "localized": true
         }
       }
+    },
+    "linkButton": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.button",
+      "repeatable": true
+    },
+    "blocks": {
+      "type": "dynamiczone",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "components": [
+        "shared.seo",
+        "shared.button"
+      ]
     }
   }
 }
