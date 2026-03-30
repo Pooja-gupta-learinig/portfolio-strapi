@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-03-30T09:08:09.105Z"
+    "x-generation-date": "2026-03-30T10:18:59.051Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -9033,6 +9033,9 @@
                                   }
                                 }
                               },
+                              "hiddenField": {
+                                "type": "string"
+                              },
                               "createdAt": {
                                 "type": "string",
                                 "format": "date-time"
@@ -12054,6 +12057,9 @@
                               }
                             }
                           },
+                          "hiddenField": {
+                            "type": "string"
+                          },
                           "createdAt": {
                             "type": "string",
                             "format": "date-time"
@@ -12575,6 +12581,9 @@
                     "shared.button": "#/components/schemas/SharedButtonComponent"
                   }
                 }
+              },
+              "hiddenField": {
+                "type": "string"
               },
               "locale": {
                 "type": "string"
@@ -14575,6 +14584,9 @@
                                   }
                                 }
                               },
+                              "hiddenField": {
+                                "type": "string"
+                              },
                               "createdAt": {
                                 "type": "string",
                                 "format": "date-time"
@@ -15218,6 +15230,9 @@
                 "shared.button": "#/components/schemas/SharedButtonComponent"
               }
             }
+          },
+          "hiddenField": {
+            "type": "string"
           },
           "createdAt": {
             "type": "string",
@@ -17437,6 +17452,9 @@
                                 "shared.button": "#/components/schemas/SharedButtonComponent"
                               }
                             }
+                          },
+                          "hiddenField": {
+                            "type": "string"
                           },
                           "createdAt": {
                             "type": "string",
@@ -20143,6 +20161,9 @@
                     "shared.button": "#/components/schemas/SharedButtonComponent"
                   }
                 }
+              },
+              "hiddenField": {
+                "type": "string"
               },
               "createdAt": {
                 "type": "string",
@@ -24889,6 +24910,9 @@
                   }
                 }
               },
+              "hiddenField": {
+                "type": "string"
+              },
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -26788,6 +26812,9 @@
                                     "shared.button": "#/components/schemas/SharedButtonComponent"
                                   }
                                 }
+                              },
+                              "hiddenField": {
+                                "type": "string"
                               },
                               "createdAt": {
                                 "type": "string",

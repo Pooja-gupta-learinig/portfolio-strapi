@@ -214,6 +214,16 @@
         "shared.seo",
         "shared.button"
       ]
+    },
+    "hiddenField": {
+      "type": "string",
+      "private": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "default": "private value"
     }
   }
 }
