@@ -623,6 +623,14 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
         };
       }> &
       Schema.Attribute.DefaultTo<true>;
+    hiddenField: Schema.Attribute.String &
+      Schema.Attribute.Private &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<'private value'>;
     likes: Schema.Attribute.Relation<'oneToMany', 'api::like.like'>;
     linkButton: Schema.Attribute.Component<'shared.button', true> &
       Schema.Attribute.SetPluginOptions<{
