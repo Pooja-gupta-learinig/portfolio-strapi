@@ -224,6 +224,21 @@
         }
       },
       "default": "private value"
+    },
+    "tags": {
+      "type": "customField",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "customField": "plugin::multi-select.multi-select",
+      "default": "[]",
+      "options": [
+        "single",
+        "multi",
+        "boolean"
+      ]
     }
   }
 }
