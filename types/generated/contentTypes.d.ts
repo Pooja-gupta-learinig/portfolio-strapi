@@ -944,6 +944,51 @@ export interface ApiLikeLike extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiMultilanguagepageMultilanguagepage
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'multilanguagepages';
+  info: {
+    displayName: 'multilanguagepage';
+    pluralName: 'multilanguagepages';
+    singularName: 'multilanguagepage';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::multilanguagepage.multilanguagepage'
+    >;
+    pageDesc: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    pageText: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiRestaurantRestaurant extends Struct.CollectionTypeSchema {
   collectionName: 'restaurants';
   info: {
@@ -1533,6 +1578,7 @@ declare module '@strapi/strapi' {
       'api::global.global': ApiGlobalGlobal;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
       'api::like.like': ApiLikeLike;
+      'api::multilanguagepage.multilanguagepage': ApiMultilanguagepageMultilanguagepage;
       'api::restaurant.restaurant': ApiRestaurantRestaurant;
       'api::state.state': ApiStateState;
       'plugin::content-releases.release': PluginContentReleasesRelease;
