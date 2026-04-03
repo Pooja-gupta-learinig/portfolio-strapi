@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "multilanguagepages",
+  "info": {
+    "singularName": "multilanguagepage",
+    "pluralName": "multilanguagepages",
+    "displayName": "multilanguagepage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "pageText": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
+    "pageDesc": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}
